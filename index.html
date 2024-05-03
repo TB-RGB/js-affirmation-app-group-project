@@ -19,13 +19,14 @@
   <main>
     <section>
       <h3>Fire and Ice:</h3>
-      <button>🔥</button>
-      <button>❄️</button>
-      <div>
+      <!--Add functions to buttons below for respective emojis-->
+      <button id="fire" onClick = 'addFire()'>🔥</button>
+      <button id="ice" onClick = 'addIce()'>❄️</button>
+      <div id="emojiDiv">
         <!-- fire and ice emojis go here -->
       </div>
     </section>
-
+<!--Ensure to use event.preventDefault() in script.js for handleSubmit()-->
     <section>
       <h3>Create an Affirmation:</h3>
       <form>
@@ -35,10 +36,10 @@
         <input
           placeholder="Author"
           type="text">
-        <button>Submit</button>
+        <button onClick="handleSubmit(event)">Submit</button>
       </form>
     </section>
-    
+    <!--use html below as template for .innerHTML in handleSubmit() to populate table with interpolated values from form-->
     <section>
       <h3>Your Affirmations:</h3>
       <table>
