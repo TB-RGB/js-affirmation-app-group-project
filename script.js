@@ -54,9 +54,16 @@ function handleSubmit(event) {
 
 function deletex(event) {
   console.log("testing delete", event);
+  let message = document.getElementById('textOutput') 
+  if(fireCount>= iceCount ){
+    message.innerText = "Needs more ice!";
 
+    return;
+
+  }
   //retrieves object via click to delete and stores the parentElement
   let toDelete = event.target.parentElement.parentElement;
   console.log(toDelete);
+  message.innerText = "";
   toDelete.remove();
 }
