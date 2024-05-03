@@ -31,13 +31,17 @@
       <h3>Create an Affirmation:</h3>
       <form>
         <input
+          id="txtInput"
           placeholder="Affirmation"
           type="text">
         <input
+          id="authorInput"
           placeholder="Author"
           type="text">
         <button onClick="handleSubmit(event)">Submit</button>
       </form>
+      <div id="textOutput">
+      </div>
     </section>
     <!--use html below as template for .innerHTML in handleSubmit() to populate table with interpolated values from form-->
     <section>
@@ -47,10 +51,11 @@
           <tr>
             <th>Affirmation Text</th>
             <th>Affirmation Author</th>
+            <th>Delete</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="tableBody">
+          <!-- <tr>
             <td>You probably got this!</td>
             <td>Oscar</td>
           </tr>
@@ -61,7 +66,7 @@
           <tr>
             <td>Don't forget to delete these three hardcoded table rows!</td>
             <td>Abby Cadabby</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </section>
