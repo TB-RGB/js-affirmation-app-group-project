@@ -11,29 +11,26 @@ function addFire() {
   let fire = document.getElementById("emojiDiv");
 
   fire.innerHTML += `<span>🔥</span>`;
-  fireCount ++;
+  fireCount++;
   console.log("checking current fire count", fireCount);
 }
 
 function addIce() {
   console.log("testing ice");
   let ice = document.getElementById("emojiDiv");
-iceCount ++;
-console.log('checking current iceCount', iceCount);
+  iceCount++;
+  console.log("checking current iceCount", iceCount);
 
   ice.innerHTML += `<span>❄️</span>`;
 }
 function handleSubmit(event) {
   console.log("in handlesubmit", event);
   event.preventDefault();
-  let message = document.getElementById('textOutput') 
-  if( iceCount >= fireCount) {
-    
+  let message = document.getElementById("textOutput");
+  if (iceCount >= fireCount) {
     message.innerText = "Needs more fire!";
 
     return;
-
-
   }
 
   let text = document.getElementById(`txtInput`).value;
@@ -54,12 +51,11 @@ function handleSubmit(event) {
 
 function deletex(event) {
   console.log("testing delete", event);
-  let message = document.getElementById('textOutput') 
-  if(fireCount>= iceCount ){
+  let message = document.getElementById("textOutput");
+  if (fireCount >= iceCount) {
     message.innerText = "Needs more ice!";
 
     return;
-
   }
   //retrieves object via click to delete and stores the parentElement
   let toDelete = event.target.parentElement.parentElement;
